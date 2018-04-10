@@ -237,6 +237,7 @@ class BinAnalyze():
                 result.append(ea)
         return result
 
+    @staticmethod
     def makeFuncsFromPreamble(funcpreamble, startea=idc.FirstSeg(), endea = idaapi.BADADDR):
         """ This method makes functions everywhere that the sequence 'funpreamble' is found.
             NOTE: this method is generally unsafe, because it will attempt to make functions where
