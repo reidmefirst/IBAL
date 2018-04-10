@@ -246,7 +246,7 @@ class BinAnalyze():
         i = 0
         while (ea != idaapi.BADADDR and ea < endea):
             ea = idc.FindBinary(ea, SEARCH_DOWN, funcpreamble)
-            makeFunction(ea)
+            idc.MakeFunction(ea)
             idc.Wait()
             ea = ea + 1 # idc.FindBinary(ea) returns ea if ea matches, silly
 
